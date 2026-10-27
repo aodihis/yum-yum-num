@@ -31,6 +31,12 @@ npm run preview      # serve dist/ locally
 or sub-folder, for example GitHub Pages, Netlify, Vercel, Cloudflare Pages or S3. No backend is needed.
 Serve it over HTTPS so mobile browsers allow audio.
 
+### GitHub Pages
+
+`.github/workflows/deploy.yml` tests, builds and publishes the game on every push to `main`
+(or manually from the Actions tab). One-time setup: **Settings → Pages → Build and deployment → Source:
+GitHub Actions**. The game is then live at https://aodihis.github.io/yum-yum-num/.
+
 ## Tests
 
 ```bash
