@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#6ec6f5" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="description" content="Yum Yum Num: a counting game for little ones." />
+    <title>Yum Yum Num</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐵</text></svg>" />
+  </head>
+  <body>
+    <div id="app">
+      <header class="hud-top">
+        <button id="replay" class="icon-btn" type="button" aria-label="Hear the question again">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 8C13 8 5 14.5 5 22.5c0 4.6 2.7 8.7 7 11.3L10 42l9-5.2c1.6.3 3.3.5 5 .5 11 0 19-6.5 19-14.8S35 8 24 8z" fill="currentColor"/><circle cx="15" cy="22.5" r="3" fill="#fff"/><circle cx="24" cy="22.5" r="3" fill="#fff"/><circle cx="33" cy="22.5" r="3" fill="#fff"/></svg>
+        </button>
+        <div class="target" aria-live="polite">
+          <span id="target-num" class="target-num" aria-label="Target number">?</span>
+          <span id="target-dots" class="target-dots" aria-hidden="true"></span>
+        </div>
+        <button id="sound" class="icon-btn" type="button" aria-label="Sound" aria-pressed="true">
+          <svg class="on" viewBox="0 0 48 48" aria-hidden="true"><path d="M8 18h7l10-8v28l-10-8H8z" fill="currentColor"/><path d="M31 17a9 9 0 0 1 0 14M35 12a15 15 0 0 1 0 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/></svg>
+          <svg class="off" viewBox="0 0 48 48" aria-hidden="true"><path d="M8 18h7l10-8v28l-10-8H8z" fill="currentColor"/><path d="M31 18l10 12M41 18L31 30" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg>
+        </button>
+      </header>
+
+      <main id="stage" class="stage">
+        <canvas id="scene" aria-label="Playground with an animal and fruit to tap"></canvas>
+        <div id="pops" class="pops" aria-hidden="true"></div>
+        <div id="number-card" class="number-card" aria-hidden="true"></div>
+      </main>
+
+      <footer class="hud-bottom">
+        <button id="undo" class="icon-btn small" type="button" aria-label="Take one back" hidden>
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M18 12 8 21l10 9" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 21h17a12 12 0 0 1 0 24h-6" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/></svg>
+        </button>
+        <div id="progress" class="progress" role="status" aria-label="Counted so far"></div>
+        <button id="next" class="icon-btn next" type="button" aria-label="Next animal" hidden>
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M17 10l16 14-16 14" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </footer>
+
+      <div id="start" class="start-overlay">
+        <button id="play" class="play-btn" type="button" aria-label="Play">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M17 11v26l21-13z" fill="currentColor" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+
+      <noscript>This game needs JavaScript.</noscript>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
